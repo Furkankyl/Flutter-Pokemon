@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:pokemon/pokemon.dart';
 
@@ -75,10 +76,9 @@ class PokeDetail extends StatelessWidget {
               child: Container(
                 height: 200,
                 width: 200,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        fit: BoxFit.fitWidth,
-                        image: NetworkImage(pokemon.img))),
+                child: CachedNetworkImage(
+                  imageUrl: pokemon.img,
+                ),
               ),
             ),
           )

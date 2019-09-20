@@ -80,7 +80,6 @@ class Pokemon {
       });
     }
   }
-
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['id'] = this.id;
@@ -109,7 +108,6 @@ class Pokemon {
 class NextEvolution {
   String num;
   String name;
-
   NextEvolution({this.num, this.name});
 
   NextEvolution.fromJson(Map<String, dynamic> json) {
