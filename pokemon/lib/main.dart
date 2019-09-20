@@ -87,6 +87,11 @@ class _HomePageState extends State<HomePage>
                                 height: 100,
                                 width: 100,
                                 child: CachedNetworkImage(
+                                  placeholder: (context, url) => new CircularProgressIndicator(
+                                    backgroundColor: Colors.cyan,
+                                  ),
+                                  placeholderFadeInDuration: Duration(seconds: 0),
+                                  fadeOutDuration: Duration(seconds: 0),
                                   imageUrl: poke.img,),
                               ),
                               Text(
